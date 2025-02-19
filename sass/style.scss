@@ -1,0 +1,19 @@
+@import"./reset.scss";
+
+$main-color: #9356DC;
+$second-color: #FF79DA;
+$third-color: #99E2D0;
+$font-title: "Shrikhand", sans-serif;
+$font-text: "Roboto", sans-serif;
+
+
+.main-container {
+    max-width: 375px;
+}
+
+h1 {
+    font-family: $font-title;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+}
