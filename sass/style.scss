@@ -29,13 +29,95 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: $box-shadow-015;
-}
+}   
+
+        .header_localisation {
+            position: sticky;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 50px;
+            background: $background-grey-234;
+            box-shadow: $box-shadow-025;
+        } p {
+            font-family: $font-text;
+            font-size: 16px;
+        }
 }
 
 /***** SECTION EXPLORER *****/
 
+.section_explorer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 270px;
+    background: $background-grey-246;
 
+    h2 {
+        font-family: $font-text;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+    }
+        p{
+            font-family: $font-text;
+            font-size: 18px;
+            font-weight: lighter;
+            text-align: center;
+        }
+            button {
+                background: $background-linear-gradient;
+                box-shadow: $box-shadow-025;
+                font-family: $font-text;
+                font-size: 16px;
+                color: white;
+                width: 218px;
+                height: 50px;
+                border-radius: 25px;
+                border: none;
+            }
+}
 
 
 /***** SECTION FONCTIONNEMENT *****/
 
+.fonctionnement {
+    height: 440px;
+    padding-left: 32.5px;
+    margin-top: 40px;
+
+    h3 {
+        font-family: $font-text;
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        margin-left: -12.5px;
+    }
+        .card_fonctionnement {
+            background: $background-grey-246;
+            box-shadow: $box-shadow-015;
+            border-radius: 20px;
+            width: 322px;
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+            span {
+                position: absolute;
+                left: 0;
+                width: 25px;
+                height: 25px;
+                background: red;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(-50%);
+            }
+}
