@@ -3,6 +3,7 @@
 $main-color: #9356DC;
 $second-color: #FF79DA;
 $third-color: #99E2D0;
+$icon-fonctionement: rgba(126, 126, 126, 1);
 $font-title: "Shrikhand", sans-serif;
 $font-text: "Roboto", sans-serif;
 $box-shadow-015: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -97,27 +98,70 @@ header {
         padding-bottom: 20px;
         margin-left: -12.5px;
     }
-        .card_fonctionnement {
-            background: $background-grey-246;
-            box-shadow: $box-shadow-015;
-            border-radius: 20px;
-            width: 322px;
-            height: 72px;
+        .flex_fonctionnement {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            flex-direction: column;
+            gap: 20px;
         }
-            span {
-                position: absolute;
-                left: 0;
-                width: 25px;
-                height: 25px;
-                background: red;
-                border-radius: 100%;
+            .card_fonctionnement {
+                background: $background-grey-246;
+                box-shadow: $box-shadow-015;
+                border-radius: 20px;
+                width: 322px;
+                height: 72px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                transform: translateX(-50%);
+                position: relative;
             }
+                span {
+                    position: absolute;
+                    left: 0;
+                    width: 25px;
+                    height: 25px;
+                    background: $main-color;
+                    color: white;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateX(-50%);
+                }
+                    .fa-mobile-screen-button, .fa-list-ul {
+                        color: $icon-fonctionement;
+                    }
+                        .fa-store {
+                            color: $main-color;
+                        }
 }
+
+/***** SECTION RESTAURANT *****/
+
+.restaurant {
+    background: $background-grey-246;
+
+        h3 {
+            font-family: $font-text;
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            padding-top: 40px;
+        }
+
+            a {
+                display: flex;
+                justify-content: center;
+            }
+
+                .card_restaurant {
+                    background: white;
+                    border-radius: 15px;
+                }
+}
+
+
+
+
+/***** FOOTER *****/
+
