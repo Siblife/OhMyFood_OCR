@@ -127,18 +127,28 @@ header {
                     align-items: center;
                     transform: translateX(-50%);
                 }
-                    .fa-mobile-screen-button, .fa-list-ul {
-                        color: $icon-fonctionement;
+                    i {
+                        position: absolute;
+                        left: 35px;
                     }
-                        .fa-store {
-                            color: $main-color;
+                        p {
+                            font-family: $font-text;
+                            font-size: 16px;
+                            font-weight: bold;
                         }
+                            .fa-mobile-screen-button, .fa-list-ul {
+                                color: $icon-fonctionement;
+                            }
+                                .fa-store {
+                                    color: $main-color;
+                                }
 }
 
 /***** SECTION RESTAURANT *****/
 
 .restaurant {
     background: $background-grey-246;
+    padding-bottom: 40px;
 
         h3 {
             font-family: $font-text;
@@ -161,7 +171,7 @@ header {
                     border-radius: 15px;
                     display: flex;
                     flex-direction: column;
-                    width: 80%;
+                    width: 346px;
                 }
                     img {
                         border-radius: 15px 15px 0 0;
@@ -184,7 +194,6 @@ header {
 
 footer {
     background: rgba(53, 53, 53, 1);
-    height: 186px;
 
 
         h5, a, i {
@@ -197,4 +206,16 @@ footer {
                 padding: 22px 25px;
                 gap: 16px;
             }
-}
+                h5 {
+                    font-family: $font-title;
+                    font-size: 18px;
+                }
+                    a {
+                        font-family: $font-text;
+                        font-size: 16px;
+                        text-decoration: none;
+                        display: flex;
+                        gap: 10px;
+                    }
+}             
+

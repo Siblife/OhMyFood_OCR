@@ -148,6 +148,15 @@ header p {
   align-items: center;
   transform: translateX(-50%);
 }
+.fonctionnement i {
+  position: absolute;
+  left: 35px;
+}
+.fonctionnement p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
 .fonctionnement .fa-mobile-screen-button, .fonctionnement .fa-list-ul {
   color: rgb(126, 126, 126);
 }
@@ -158,6 +167,7 @@ header p {
 /***** SECTION RESTAURANT *****/
 .restaurant {
   background: rgb(246, 246, 246);
+  padding-bottom: 40px;
 }
 .restaurant h3 {
   font-family: "Roboto", sans-serif;
@@ -178,7 +188,7 @@ header p {
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 346px;
 }
 .restaurant img {
   border-radius: 15px 15px 0 0;
@@ -196,7 +206,6 @@ header p {
 /***** FOOTER *****/
 footer {
   background: rgb(53, 53, 53);
-  height: 186px;
 }
 footer h5, footer a, footer i {
   color: white;
@@ -206,6 +215,17 @@ footer .flex_footer {
   flex-direction: column;
   padding: 22px 25px;
   gap: 16px;
+}
+footer h5 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+}
+footer a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
