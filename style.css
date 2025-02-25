@@ -170,12 +170,42 @@ header p {
 .restaurant a {
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
 }
 .restaurant .card_restaurant {
   background: white;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.restaurant img {
+  border-radius: 15px 15px 0 0;
+}
+.restaurant h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+.restaurant p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
 }
 
 /***** FOOTER *****/
+footer {
+  background: rgb(53, 53, 53);
+  height: 186px;
+}
+footer h5, footer a, footer i {
+  color: white;
+}
+footer .flex_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -152,12 +152,29 @@ header {
             a {
                 display: flex;
                 justify-content: center;
+                text-decoration: none;
+                color: inherit;
             }
 
                 .card_restaurant {
                     background: white;
                     border-radius: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
                 }
+                    img {
+                        border-radius: 15px 15px 0 0;
+                    }
+                        h4 {
+                            font-family: $font-text;
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                            p {
+                                font-family: $font-text;
+                                font-size: 17px;
+                            }
 }
 
 
@@ -165,3 +182,19 @@ header {
 
 /***** FOOTER *****/
 
+footer {
+    background: rgba(53, 53, 53, 1);
+    height: 186px;
+
+
+        h5, a, i {
+            color: white;
+        }
+
+            .flex_footer {
+                display: flex;
+                flex-direction: column;
+                padding: 22px 25px;
+                gap: 16px;
+            }
+}
