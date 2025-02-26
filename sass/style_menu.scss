@@ -19,6 +19,43 @@ $vert-menu: 3px solid rgba(153, 226, 208, 1);
     max-width: 375px;
 }
 
+h1 {
+    font-family: $font-title;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: $font-title;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: $font-text;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+p {
+    font-family: $font-text;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.prix {
+    font-family: $font-text;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    width: 100%;
+    height: 275px;
+}
+
 /***** HEADER *****/
 
 header {
@@ -33,3 +70,88 @@ header {
             color: black;
         }
 }
+
+/***** CARD RESTAURANT *****/
+
+.menu_restaurant {
+    padding: 20px;
+    background: $background-grey-246;
+
+        .flex_menu {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-bottom: 40px;
+        }
+
+            .flex_title_menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+
+                .border_bot {
+                    border-bottom: 3px $third-color solid;
+                    width: 40px;
+                }
+
+                    .card_menu_choix {
+                        background: white;
+                        box-shadow: $box-shadow-015;
+                        border-radius: 15px;
+                        height: 69px;
+                        padding: 15px;
+                    }
+
+                        .flex_text_restaurants {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        .flex_button {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                            button {
+                                background: $background-linear-gradient;
+                                box-shadow: $box-shadow-025;
+                                font-family: $font-text;
+                                font-size: 16px;
+                                color: white;
+                                width: 218px;
+                                height: 50px;
+                                border-radius: 25px;
+                                border: none;
+                            }
+}
+
+/***** FOOTER *****/
+
+footer {
+    background: rgba(53, 53, 53, 1);
+
+
+        h5, a, i {
+            color: white;
+        }
+
+            .flex_footer {
+                display: flex;
+                flex-direction: column;
+                padding: 22px 25px;
+                gap: 16px;
+            }
+                h5 {
+                    font-family: $font-title;
+                    font-size: 18px;
+                }
+                    a {
+                        font-family: $font-text;
+                        font-size: 16px;
+                        text-decoration: none;
+                        display: flex;
+                        gap: 10px;
+                    }
+}             
