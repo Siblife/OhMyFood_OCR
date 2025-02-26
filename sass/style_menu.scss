@@ -18,3 +18,18 @@ $vert-menu: 3px solid rgba(153, 226, 208, 1);
 .main-container {
     max-width: 375px;
 }
+
+/***** HEADER *****/
+
+header {
+    height: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+        a {
+            position: absolute;
+            left: 20px;
+            color: black;
+        }
+}

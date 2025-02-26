@@ -48,16 +48,5 @@ td, th {
 }
 
 /***** HEADER *****/
-header {
-  height: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header a {
-  position: absolute;
-  left: 20px;
-  color: black;
-}
 
 /*# sourceMappingURL=style_menu.css.map */
