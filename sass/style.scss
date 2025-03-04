@@ -261,5 +261,12 @@ footer {
 /***** MEDIA QUERIES *****/
 
 @media (min-width: 1024px) {
+    .fonctionnement {
 
+        .flex_fonctionnement {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
 }
