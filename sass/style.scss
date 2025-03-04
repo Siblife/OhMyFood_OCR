@@ -124,6 +124,9 @@ header {
                     justify-content: center;
                     align-items: center;
                     transform: translateX(-50%);
+                    font-family: $font-text;
+                    font-weight: 500;
+                    font-size: 14px;
                 }
                     i {
                         position: absolute;
@@ -151,7 +154,7 @@ header {
         h3 {
             font-family: $font-text;
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
             padding-bottom: 20px;
             margin-left: 20px;
             padding-top: 40px;
@@ -176,8 +179,19 @@ header {
 
                         span {
                             position: absolute;
-                            top: 5px;
-                            right: 5px;
+                            top: 10px;
+                            right: 10px;
+                            background: $third-color;
+                            width: 80px;
+                            height: 29px;
+                            border-radius: 2px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: rgb(0, 135, 102);
+                            font-family: $font-text;
+                            font-weight: 500;
+                            font-size: 14px;
                         }
 
                         .text_restaurant {
