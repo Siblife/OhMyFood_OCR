@@ -72,11 +72,12 @@ header {
 /***** CARD RESTAURANT *****/
 
 .menu_restaurant {
-    padding: 15px;
+    padding: 10px;
     background: $background-grey-246;
     position: relative;
-    margin-top: -20px;
+    margin-top: -55px;
     border-radius: 40px;
+    padding-bottom: 30px;
 
         .flex_menu {
             display: flex;
@@ -90,6 +91,7 @@ header {
                 justify-content: space-between;
                 align-items: center;
                 padding-bottom: 20px;
+                padding-right: 20px;
             }
 
                 .border_bot {
