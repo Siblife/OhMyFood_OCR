@@ -6,6 +6,7 @@ $third-color: #99E2D0;
 $icon-fonctionement: rgba(126, 126, 126, 1);
 $font-title: "Shrikhand", sans-serif;
 $font-text: "Roboto", sans-serif;
+$box-shadow-05: 0px 6px 15px rgba(0, 0, 0, 0.5);
 $box-shadow-015: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-025: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $background-grey-234: rgb(234, 234, 234);
@@ -60,11 +61,12 @@ header {
         font-weight: bold;
         text-align: center;
     }
-        p{
+        p {
             font-family: $font-text;
             font-size: 18px;
             font-weight: lighter;
             text-align: center;
+            padding-bottom: 20px;
         }
             .btn-explorer {
                 background: $background-linear-gradient;
@@ -88,10 +90,10 @@ header {
 /***** SECTION FONCTIONNEMENT *****/
 
 .fonctionnement {
-    height: 440px;
     padding-left: 32.5px;
     margin-top: 40px;
     padding-right: 20px;
+    padding-bottom: 40px;
 
     h3 {
         font-family: $font-text;
@@ -256,3 +258,8 @@ footer {
                     }
 }             
 
+/***** MEDIA QUERIES *****/
+
+@media (min-width: 1024px) {
+
+}
