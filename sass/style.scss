@@ -66,7 +66,7 @@ header {
             font-weight: lighter;
             text-align: center;
         }
-            button {
+            .btn-explorer {
                 background: $background-linear-gradient;
                 box-shadow: $box-shadow-025;
                 font-family: $font-text;
@@ -77,6 +77,10 @@ header {
                 border-radius: 25px;
                 border: none;
                 padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
             }
 }
 
@@ -156,7 +160,6 @@ header {
             font-size: 24px;
             font-weight: 700;
             padding-bottom: 20px;
-            margin-left: 20px;
             padding-top: 40px;
         }
 
