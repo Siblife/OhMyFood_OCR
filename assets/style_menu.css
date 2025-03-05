@@ -172,5 +172,21 @@ footer a {
 }
 
 /***** MEDIA QUERIES *****/
+@media (min-width: 1024px) {
+  .card_restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card_restaurant .menu_restaurant {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu_restaurant .flex_title_menu {
+    justify-content: center;
+    gap: 25px;
+  }
+}
 
 /*# sourceMappingURL=style_menu.css.map */
