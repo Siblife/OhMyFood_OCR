@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -106,6 +107,11 @@ header p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Anime l'ombre portée sur 0.3s avec le même effet fluide */
+}
+.section_explorer .btn-explorer:hover {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%), 10%; /* Éclaircissement */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
 }
 
 /***** SECTION FONCTIONNEMENT *****/
@@ -174,6 +180,8 @@ header p {
 .restaurant {
   background: rgb(246, 246, 246);
   padding: 20px 20px 40px 20px;
+  /* Style par défaut du cœur */
+  /* Effet au clic (quand le checkbox est coché) */
 }
 .restaurant h3 {
   font-family: "Roboto", sans-serif;
@@ -220,6 +228,19 @@ header p {
   align-items: center;
   height: 27%;
   padding: 0 10px;
+}
+.restaurant .heart_checkbox {
+  display: none;
+}
+.restaurant .heart_label i {
+  font-size: 24px; /* Taille du cœur */
+  color: black; /* Couleur initiale */
+  cursor: pointer; /* Indique que c'est cliquable */
+  transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+.restaurant .heart_checkbox:checked + i {
+  color: red; /* Couleur du cœur rempli */
+  transform: scale(1.2);
 }
 .restaurant img {
   border-radius: 15px 15px 0 0;
@@ -268,6 +289,14 @@ footer a {
     display: flex;
     flex-direction: row;
     gap: 40px;
+  }
+  .restaurant .flex_restaurant {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .restaurant .flex_restaurant a {
+    width: 35%;
   }
 }
 

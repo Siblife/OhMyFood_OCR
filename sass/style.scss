@@ -83,7 +83,15 @@ header {
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
-            }
+                transition: background 0.3s ease-in-out, /* Anime le changement de fond sur 0.3s avec un effet fluide */
+                box-shadow 0.3s ease-in-out; /* Anime l'ombre portée sur 0.3s avec le même effet fluide */;
+                }
+
+                    .btn-explorer:hover {
+                        background: ($background-linear-gradient, 10%); /* Éclaircissement */
+                        box-shadow: $box-shadow-05; /* Ombre plus marquée */
+                    }
+            
 }
 
 
@@ -208,23 +216,40 @@ header {
                         }
                 }
 
-            
-                    img {
-                        border-radius: 15px 15px 0 0;
-                        height: 73%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                        h4 {
-                            font-family: $font-text;
-                            font-size: 18px;
-                            font-weight: bold;
-                        }
-                            p {
-                                font-family: $font-text;
-                                font-size: 17px;
+                            .heart_checkbox {
+                                display: none;
                             }
-}
+
+                            /* Style par défaut du cœur */
+                            .heart_label i {
+                                font-size: 24px; /* Taille du cœur */
+                                color: black; /* Couleur initiale */
+                                cursor: pointer; /* Indique que c'est cliquable */
+                                transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
+                            }
+
+                            /* Effet au clic (quand le checkbox est coché) */
+                            .heart_checkbox:checked + i {
+                                color: red; /* Couleur du cœur rempli */
+                                transform: scale(1.2); 
+                            }
+
+                                        img {
+                                            border-radius: 15px 15px 0 0;
+                                            height: 73%;
+                                            width: 100%;
+                                            object-fit: cover;
+                                        }
+                                            h4 {
+                                                font-family: $font-text;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                            }
+                                                p {
+                                                    font-family: $font-text;
+                                                    font-size: 17px;
+                                                }
+                    }
 
 
 
@@ -267,6 +292,19 @@ footer {
             display: flex;
             flex-direction: row;
             gap: 40px;
+        }
+    }
+
+    .restaurant {
+
+        .flex_restaurant {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            a {
+                width: 35%;
+            }
         }
     }
 }

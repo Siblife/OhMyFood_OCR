@@ -76,7 +76,7 @@ header {
     background: $background-grey-246;
     position: relative;
     margin-top: -55px;
-    border-radius: 40px;
+    border-radius: 40px 40px 0 0;
     padding-bottom: 30px;
 
         .flex_menu {
@@ -90,8 +90,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding-bottom: 20px;
-                padding-right: 20px;
+                padding: 10px;
             }
 
                 .border_bot {
@@ -158,3 +157,10 @@ footer {
                         gap: 10px;
                     }
 }             
+
+
+/***** MEDIA QUERIES *****/
+
+@media (min-width: 1024px) {
+        
+}
