@@ -285,18 +285,8 @@ footer a {
 
 /***** MEDIA QUERIES *****/
 @media (min-width: 1024px) {
-  .fonctionnement .flex_fonctionnement {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-  }
-  .restaurant .flex_restaurant {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-  .restaurant .flex_restaurant a {
-    width: 35%;
+  .section_explorer h2 {
+    font-size: 40px;
   }
 }
 
