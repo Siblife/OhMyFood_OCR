@@ -220,18 +220,35 @@ header {
                                 display: none;
                             }
 
+                            .heart_label {
+                                position: relative;
+                                height: 30px;
+                                width: 30px;
+                            }
+
                             /* Style par défaut du cœur */
                             .heart_label i {
                                 font-size: 24px; /* Taille du cœur */
-                                color: black; /* Couleur initiale */
                                 cursor: pointer; /* Indique que c'est cliquable */
-                                transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
+                                transition: all 0.5s ease-in-out;
+                                position: absolute;
+                            }
+
+                            .heart_label i.fa-solid {
+                                opacity: 0;
                             }
 
                             /* Effet au clic (quand le checkbox est coché) */
                             .heart_checkbox:checked + i {
-                                color: red; /* Couleur du cœur rempli */
+                                background: $background-linear-gradient; /* Couleur du cœur rempli */
+                                background-clip: text;
+                                color: transparent;
                                 transform: scale(1.2); 
+                                opacity: 1;
+                            }
+
+                            .heart_checkbox:checked ~ i.fa-regular {
+                                opacity: 0;
                             }
 
                                         img {

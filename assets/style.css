@@ -232,15 +232,29 @@ header p {
 .restaurant .heart_checkbox {
   display: none;
 }
+.restaurant .heart_label {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
 .restaurant .heart_label i {
   font-size: 24px; /* Taille du cœur */
-  color: black; /* Couleur initiale */
   cursor: pointer; /* Indique que c'est cliquable */
-  transition: color 0.5s ease-in-out, transform 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+}
+.restaurant .heart_label i.fa-solid {
+  opacity: 0;
 }
 .restaurant .heart_checkbox:checked + i {
-  color: red; /* Couleur du cœur rempli */
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%); /* Couleur du cœur rempli */
+  background-clip: text;
+  color: transparent;
   transform: scale(1.2);
+  opacity: 1;
+}
+.restaurant .heart_checkbox:checked ~ i.fa-regular {
+  opacity: 0;
 }
 .restaurant img {
   border-radius: 15px 15px 0 0;
