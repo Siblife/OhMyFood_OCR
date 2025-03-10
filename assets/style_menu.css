@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -102,6 +103,7 @@ header a {
   margin-top: -55px;
   border-radius: 40px 40px 0 0;
   padding-bottom: 30px;
+  /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
 }
 .menu_restaurant .flex_menu {
   display: flex;
@@ -125,6 +127,11 @@ header a {
   border-radius: 15px;
   height: 69px;
   padding: 15px;
+  position: relative;
+  /*display: flex;
+  align-items: center;
+  justify-content: space-between;*/
+  cursor: pointer;
 }
 .menu_restaurant .flex_text_restaurants {
   display: flex;
@@ -144,6 +151,29 @@ header a {
   height: 50px;
   border-radius: 25px;
   border: none;
+}
+.menu_restaurant .hidden-input {
+  display: none;
+}
+.menu_restaurant .button_check_menu {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) translateX(40px); /* Caché sur le côté */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+  background: #A7E1C0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu_restaurant .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
+  transform: translateY(-50%) translateX(0); /* Affiche à droite */
+  opacity: 1;
 }
 
 /***** FOOTER *****/

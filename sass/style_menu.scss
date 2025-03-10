@@ -104,6 +104,11 @@ header {
                         border-radius: 15px;
                         height: 69px;
                         padding: 15px;
+                        position: relative;
+                        /*display: flex;
+                        align-items: center;
+                        justify-content: space-between;*/
+                        cursor: pointer;
                     }
 
                         .flex_text_restaurants {
@@ -127,6 +132,33 @@ header {
                                 border-radius: 25px;
                                 border: none;
                             }
+
+                                .hidden-input {
+                                    display: none;
+                                }
+
+                                    .button_check_menu {
+                                        position: absolute;
+                                        right: 10px;
+                                        top: 50%;
+                                        transform: translateY(-50%) translateX(40px); /* Caché sur le côté */
+                                        opacity: 0;
+                                        transition: transform 0.3s ease, opacity 0.3s ease;
+                                        color: #fff;
+                                        background: #A7E1C0;
+                                        border-radius: 50%;
+                                        width: 30px;
+                                        height: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+
+                                        /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
+                                        .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
+                                            transform: translateY(-50%) translateX(0); /* Affiche à droite */
+                                            opacity: 1;
+                                        }
 }
 
 /***** FOOTER *****/
