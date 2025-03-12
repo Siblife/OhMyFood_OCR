@@ -146,9 +146,9 @@ header {
                                         transition: transform 0.3s ease, opacity 0.3s ease;
                                         color: #fff;
                                         background: #A7E1C0;
-                                        border-radius: 0 10px 10px 0;
+                                        border-radius: 0 15px 15px 0;
                                         width: 59px;
-                                        height: 72px;
+                                        height: 70px;
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
@@ -156,7 +156,7 @@ header {
 
                                         /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
                                         .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
-                                            transform: translateY(-50%) translateX(0); /* Affiche à droite */
+                                            transform: translateY(-50%) translateX(10px); /* Affiche à droite */
                                             opacity: 1;
                                         }
 }
