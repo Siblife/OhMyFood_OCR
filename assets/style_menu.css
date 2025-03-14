@@ -68,14 +68,6 @@ p {
   font-weight: 300;
 }
 
-.prix {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  justify-content: flex-end;
-}
-
 img {
   width: 100%;
   height: 275px;
@@ -103,6 +95,10 @@ header a {
   margin-top: -55px;
   border-radius: 40px 40px 0 0;
   padding-bottom: 30px;
+  /*.flex_button {
+    display: flex;
+    justify-content: center;
+  }*/
   /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
 }
 .menu_restaurant .flex_menu {
@@ -118,7 +114,7 @@ header a {
   padding: 10px;
 }
 .menu_restaurant .border_bot {
-  border-bottom: 3px #99E2D0 solid;
+  border-bottom: 3px #99e2d0 solid;
   width: 40px;
 }
 .menu_restaurant .card_menu_choix {
@@ -126,23 +122,27 @@ header a {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   height: 69px;
-  padding: 15px;
-  position: relative;
-  /*display: flex;
-  align-items: center;
-  justify-content: space-between;*/
+  padding-left: 15px;
+  display: flex;
   cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+}
+.menu_restaurant .card_menu_choix .prix {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  height: 69px;
 }
 .menu_restaurant .flex_text_restaurants {
   display: flex;
   justify-content: space-between;
 }
-.menu_restaurant .flex_button {
-  display: flex;
-  justify-content: center;
-}
 .menu_restaurant button {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -156,23 +156,20 @@ header a {
   display: none;
 }
 .menu_restaurant .button_check_menu {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%) translateX(40px); /* Caché sur le côté */
+  margin-right: -59px;
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: all 1s ease;
   color: #fff;
-  background: #A7E1C0;
+  background: #a7e1c0;
   border-radius: 0 15px 15px 0;
   width: 59px;
-  height: 70px;
+  height: 69px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .menu_restaurant .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
-  transform: translateY(-50%) translateX(10px); /* Affiche à droite */
+  margin-right: 0;
   opacity: 1;
 }
 
@@ -180,7 +177,9 @@ header a {
 footer {
   background: rgb(53, 53, 53);
 }
-footer h5, footer a, footer i {
+footer h5,
+footer a,
+footer i {
   color: white;
 }
 footer .flex_footer {
