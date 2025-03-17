@@ -10,11 +10,7 @@ $box-shadow-015: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-025: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $background-grey-234: rgb(234, 234, 234);
 $background-grey-246: rgb(246, 246, 246);
-$background-linear-gradient: linear-gradient(
-  193.33deg,
-  $main-color -11.44%,
-  $second-color 123.93%
-);
+$background-linear-gradient: linear-gradient( 193.33deg, $main-color -11.44%, $second-color 123.93%);
 $vert-nouveau: rgba(0, 135, 102, 1);
 $vert-menu: 3px solid rgba(153, 226, 208, 1);
 
@@ -109,16 +105,17 @@ header {
         font-family: $font-text;
         font-size: 15px;
         font-weight: 700;
-        display: flex;
-        justify-content: flex-end;
         margin-left: auto;
         height: 69px;
+        padding-top: 37px;
+        padding-right: 20px;
       }
   }
 
   .flex_text_restaurants {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /*.flex_button {
@@ -155,6 +152,14 @@ header {
     align-items: center;
     justify-content: center;
   }
+
+  .card_menu_choix:has(.hidden-input:checked) .flex_text_restaurants h3,
+  .card_menu_choix:has(.hidden-input:checked) .flex_text_restaurants p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
 
   /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
   .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
