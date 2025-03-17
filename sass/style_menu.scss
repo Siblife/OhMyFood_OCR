@@ -6,6 +6,7 @@ $third-color: #99e2d0;
 $icon-fonctionement: rgba(126, 126, 126, 1);
 $font-title: "Shrikhand", sans-serif;
 $font-text: "Roboto", sans-serif;
+$box-shadow-05: 0px 6px 15px rgba(0, 0, 0, 0.5);
 $box-shadow-015: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-025: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $background-grey-234: rgb(234, 234, 234);
@@ -83,6 +84,41 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+
+    .heart_checkbox {
+      display: none;
+    }
+  
+    .heart_label {
+      position: relative;
+      height: 30px;
+      width: 30px;
+    }
+  
+    /* Style par défaut du cœur */
+    .heart_label i {
+      font-size: 24px; /* Taille du cœur */
+      cursor: pointer; /* Indique que c'est cliquable */
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+    }
+  
+    .heart_label i.fa-solid {
+      opacity: 0;
+    }
+  
+    /* Effet au clic (quand le checkbox est coché) */
+    .heart_checkbox:checked + i {
+      background: $background-linear-gradient; /* Couleur du cœur rempli */
+      background-clip: text;
+      color: transparent;
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  
+    .heart_checkbox:checked ~ i.fa-regular {
+      opacity: 0;
+    }
   }
 
   .border_bot {
@@ -165,6 +201,36 @@ header {
   .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
     margin-right: 0;
     opacity: 1;
+  }
+
+  .flex_button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn_commander {
+    background: $background-linear-gradient;
+    box-shadow: $box-shadow-025;
+    font-family: $font-text;
+    font-size: 16px;
+    color: white;
+    width: fit-content;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out,
+      /* Anime le changement de fond sur 0.3s avec un effet fluide */ box-shadow
+    0.3s ease-in-out; /* Anime l'ombre portée sur 0.3s avec le même effet fluide */
+  }
+
+  .btn_commander:hover {
+    background: ($background-linear-gradient, 10%); /* Éclaircissement */
+    box-shadow: $box-shadow-05; /* Ombre plus marquée */
   }
 }
 

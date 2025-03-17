@@ -112,6 +112,35 @@ header a {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  /* Style par défaut du cœur */
+  /* Effet au clic (quand le checkbox est coché) */
+}
+.menu_restaurant .flex_title_menu .heart_checkbox {
+  display: none;
+}
+.menu_restaurant .flex_title_menu .heart_label {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.menu_restaurant .flex_title_menu .heart_label i {
+  font-size: 24px; /* Taille du cœur */
+  cursor: pointer; /* Indique que c'est cliquable */
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+}
+.menu_restaurant .flex_title_menu .heart_label i.fa-solid {
+  opacity: 0;
+}
+.menu_restaurant .flex_title_menu .heart_checkbox:checked + i {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%); /* Couleur du cœur rempli */
+  background-clip: text;
+  color: transparent;
+  transform: scale(1.2);
+  opacity: 1;
+}
+.menu_restaurant .flex_title_menu .heart_checkbox:checked ~ i.fa-regular {
+  opacity: 0;
 }
 .menu_restaurant .border_bot {
   border-bottom: 3px #99e2d0 solid;
@@ -179,6 +208,31 @@ header a {
 .menu_restaurant .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
   margin-right: 0;
   opacity: 1;
+}
+.menu_restaurant .flex_button {
+  display: flex;
+  justify-content: center;
+}
+.menu_restaurant .btn_commander {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: white;
+  width: fit-content;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Anime l'ombre portée sur 0.3s avec le même effet fluide */
+}
+.menu_restaurant .btn_commander:hover {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%), 10%; /* Éclaircissement */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
 }
 
 /***** FOOTER *****/
