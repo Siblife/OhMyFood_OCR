@@ -375,6 +375,7 @@ footer a {
 
   .fonctionnement {
     padding: 50px 180px;
+    margin-top: 0;
 
     .flex_fonctionnement {
       display: flex;
