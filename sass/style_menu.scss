@@ -136,6 +136,7 @@ header {
     cursor: pointer;
     overflow: hidden;
     width: 100%;
+    /* Les proriétés en dessous servent à cacher les éléments au départ   */
     opacity: 0;
     transform: translateY(20px);
     animation: apparition 0.5s ease-in-out forwards;
