@@ -372,6 +372,15 @@ footer a {
   .section_explorer h2 {
     font-size: 40px;
   }
+
+  .fonctionnement {
+    padding: 50px 180px;
+
+    .flex_fonctionnement {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
