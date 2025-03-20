@@ -100,6 +100,8 @@ header a {
     justify-content: center;
   }*/
   /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
+  /* Animation d'apparition */
+  /* Ajouter un délai pour chaque plat */
 }
 .menu_restaurant .flex_menu {
   display: flex;
@@ -156,6 +158,9 @@ header a {
   cursor: pointer;
   overflow: hidden;
   width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: apparition 0.5s ease-in-out forwards;
 }
 .menu_restaurant .card_menu_choix .prix {
   font-family: "Roboto", sans-serif;
@@ -233,6 +238,43 @@ header a {
 .menu_restaurant .btn_commander:hover {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%), 10%; /* Éclaircissement */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu_restaurant .entree .card_menu_choix:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.menu_restaurant .entree .card_menu_choix:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu_restaurant .entree .card_menu_choix:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.menu_restaurant .plat .card_menu_choix:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.menu_restaurant .plat .card_menu_choix:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.menu_restaurant .plat .card_menu_choix:nth-child(4) {
+  animation-delay: 1.8s;
+}
+.menu_restaurant .dessert .card_menu_choix:nth-child(2) {
+  animation-delay: 2.1s;
+}
+.menu_restaurant .dessert .card_menu_choix:nth-child(3) {
+  animation-delay: 2.4s;
+}
+.menu_restaurant .dessert .card_menu_choix:nth-child(4) {
+  animation-delay: 2.7s;
 }
 
 /***** FOOTER *****/

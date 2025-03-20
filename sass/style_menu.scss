@@ -136,6 +136,9 @@ header {
     cursor: pointer;
     overflow: hidden;
     width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: apparition 0.5s ease-in-out forwards;
 
     .prix {
         font-family: $font-text;
@@ -232,6 +235,30 @@ header {
     background: ($background-linear-gradient, 10%); /* Éclaircissement */
     box-shadow: $box-shadow-05; /* Ombre plus marquée */
   }
+
+  /* Animation d'apparition */
+  @keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  /* Ajouter un délai pour chaque plat */
+  .entree .card_menu_choix:nth-child(2) { animation-delay: 0.3s; }
+  .entree .card_menu_choix:nth-child(3) { animation-delay: 0.6s; }
+  .entree .card_menu_choix:nth-child(4) { animation-delay: 0.9s; }
+
+  .plat .card_menu_choix:nth-child(2) { animation-delay: 1.2s; }
+  .plat .card_menu_choix:nth-child(3) { animation-delay: 1.5s; }
+  .plat .card_menu_choix:nth-child(4) { animation-delay: 1.8s; }
+
+  .dessert .card_menu_choix:nth-child(2) { animation-delay: 2.1s; }
+  .dessert .card_menu_choix:nth-child(3) { animation-delay: 2.4s; }
+  .dessert .card_menu_choix:nth-child(4) { animation-delay: 2.7s; }
 }
 
 /***** FOOTER *****/
