@@ -372,15 +372,19 @@ footer a {
   .section_explorer h2 {
     font-size: 40px;
   }
-
   .fonctionnement {
     padding: 50px 180px;
     margin-top: 0;
-
-    .flex_fonctionnement {
-      display: flex;
-      flex-direction: row;
-    }
+  }
+  .fonctionnement .h3 {
+    margin-left: 0;
+  }
+  .fonctionnement .flex_fonctionnement {
+    display: flex;
+    flex-direction: row;
+  }
+  .restaurant {
+    padding: 0 180px;
   }
 }
 
