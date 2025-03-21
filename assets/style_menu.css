@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -20,10 +24,6 @@ button, input, select {
 
 html {
   box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
 }
 
 img, video {
@@ -176,6 +176,7 @@ header a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 .menu_restaurant button {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -203,13 +204,13 @@ header a {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 .menu_restaurant .card_menu_choix:has(.hidden-input:checked) .flex_text_restaurants h3,
 .menu_restaurant .card_menu_choix:has(.hidden-input:checked) .flex_text_restaurants p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 70%;
 }
 .menu_restaurant .card_menu_choix:has(.hidden-input:checked) .button_check_menu {
   margin-right: 0;

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @import "./reset.scss";
 
 $main-color: #9356dc;
@@ -156,6 +160,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
   }
 
   /*.flex_button {
@@ -191,6 +196,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   .card_menu_choix:has(.hidden-input:checked) .flex_text_restaurants h3,
@@ -198,7 +204,6 @@ header {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 70%;
 }
 
   /* Effet actif : affiche le bouton validé quand l'input est sélectionné */
