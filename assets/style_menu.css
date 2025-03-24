@@ -317,10 +317,14 @@ footer a {
     width: 70%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .menu_restaurant .flex_title_menu {
     justify-content: center;
     gap: 25px;
+  }
+  .menu_restaurant .flex_menu {
+    width: 70%;
   }
 }
 
