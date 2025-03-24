@@ -22,10 +22,6 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
 img, video {
   height: auto;
   max-width: 100%;
@@ -376,7 +372,7 @@ footer a {
     padding: 50px 180px;
     margin-top: 0;
   }
-  .fonctionnement .h3 {
+  .fonctionnement h3 {
     margin-left: 0;
   }
   .fonctionnement .flex_fonctionnement {
@@ -385,6 +381,14 @@ footer a {
   }
   .restaurant {
     padding: 0 180px;
+  }
+  .restaurant .flex_restaurant_card_desktop {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+  .restaurant .flex_restaurant_card_desktop .card_restaurant {
+    width: 490px;
   }
 }
 

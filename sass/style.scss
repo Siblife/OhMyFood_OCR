@@ -366,7 +366,7 @@ footer {
     padding: 50px 180px;
     margin-top: 0;
 
-  .h3 {
+  h3 {
     margin-left: 0;
   }  
 
@@ -378,6 +378,16 @@ footer {
 
   .restaurant {
     padding: 0 180px;
+
+  .flex_restaurant_card_desktop {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+  .card_restaurant {
+    width: 490px;
+  }
+  }
   }
 }
 
