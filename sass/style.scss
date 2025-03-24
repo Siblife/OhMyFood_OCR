@@ -381,8 +381,7 @@ footer {
 
   .flex_restaurant_card_desktop {
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    justify-content: space-between;
 
   .card_restaurant {
     width: 490px;
