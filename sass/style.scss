@@ -15,59 +15,58 @@ $background-linear-gradient: linear-gradient(193.33deg, $main-color -11.44%, $se
 $vert-nouveau: rgba(0, 135, 102, 1);
 $vert-menu: 3px solid rgba(153, 226, 208, 1);
 
-/* Styles pour la superposition du loader */
-.loader_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff; /* Fond blanc */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    animation: fadeOut 3s forwards; /* Disparition après 3s */
+
+.dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-/* Animation de disparition */
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
+.dot {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #b3d4fc;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
-/* Loader animé (cercle qui tourne) */
-.loader {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #ccc;
-    border-top: 6px solid #3498db; /* Couleur du chargement */
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.dot:last-child {
+  margin-right: 0;
 }
 
-/* Animation de rotation */
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.dot:nth-child(1) {
+  animation-delay: -0.3s;
 }
 
-/* Masquer le contenu au début */
-.main_container {
-    display: none;
+.dot:nth-child(2) {
+  animation-delay: -0.1s;
 }
 
-/* Afficher le contenu après la disparition du loader */
-.loader_container {
-    animation: fadeOut 3s forwards;
-}
-.loader_container + .main_container {
-    animation: showContent 3s forwards;
+.dot:nth-child(3) {
+  animation-delay: 0.1s;
 }
 
-@keyframes showContent {
-    0% { opacity: 0; }
-    100% { opacity: 1; display: block; }
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #6793fb;
+    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+  }
+
+  100% {
+    transform: scale(0.8);
+    background-color: #b3d4fc;
+    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+  }
 }
 
 /***** HEADER *****/
@@ -387,6 +386,18 @@ footer {
     width: 490px;
   }
   }
+  }
+
+  footer {
+    .flex_footer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    h5 {
+      order: 1;
+      margin-left: auto;
+    }
   }
 }
 
