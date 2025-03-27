@@ -11,86 +11,148 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
         rel="stylesheet">
     <title>ohmyfood</title>
+    <link rel="stylesheet" href="../assets/style_menu.css">
 </head>
 
 <body>
     <div class="main-container">
         <header>
-            <a href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
             <h1>ohmyfood</h1>
         </header>
-        <main>
+        <main class="card_restaurant">
             <img src="../assets/images/restaurants/le_delice_des_sens.jpg"
                 alt="Image montrant un plat du restaurant Le délice des sens">
-            <section>
-                <h2>Le délice des sens</h2>
-                <i class="fa-regular fa-heart"></i>
-                <div>
-                    <p>ENTREES</p>
-                    <div>
-                        <h3>Tartare de thon</h3>
-                        <p>Assaisonné au yuzu</p>
-                        <p>25€</p>
-                    </div>
-                    <div>
-                        <h3>Bouchée de homard croustillant</h3>
-                        <p>Et sa farandole de petits légumes</p>
-                        <p>35€</p>
-                    </div>
-                    <div>
-                        <h3>Poulet rôti aux herbes de Provence</h3>
-                        <p>Et sa crème de truffe</p>
-                        <p>40€</p>
-                    </div>
+            <section class="menu_restaurant">
+                <div class="flex_title_menu">
+                    <h2>Le délice des sens</h2>
+                    <label class="heart_label">
+                        <input type="checkbox" class="heart_checkbox">
+                        <i class="fa-solid fa-heart heart_full"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    </label>
                 </div>
-                <div>
-                    <p>PLATS</p>
-                    <div>
-                        <h3>Poulet rôti aux herbes de Provence</h3>
-                        <p>Et sa crème de truffe</p>
-                        <p>40€</p>
+
+                <div class="flex_menu entree">
+                    <div class="flex_choix_menu">
+                        <p class="border_bot">ENTRÉES</p>
                     </div>
-                    <div>
-                        <h3>Langouste rôtie</h3>
-                        <p>Et ses légumes de saison</p>
-                        <p>35€</p>
-                    </div>
-                    <div>
-                        <h3>Côte de boeuf Angus</h3>
-                        <p>Et sa purée de panais</p>
-                        <p>44€</p>
-                    </div>
+
+                    <label for="entree" class="card_menu_choix">
+                        <input id="entree" type="radio" name="entrée" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Tartare de thon</h3>
+                            <p>Assaissoné au yuzu</p>
+                        </div>
+                        <span class="prix">25€</span>
+                        <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="entree2" class="card_menu_choix">
+                        <input id="entree2" type="radio" name="entrée" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Bouchée de homard croustillant</h3>
+                            <p>Et sa farandole de petits légumes</p>
+                        </div>
+                            <span class="prix">35€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="entree3" class="card_menu_choix">
+                        <input id="entree3" type="radio" name="entrée" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Poutlet rôti aux herbes de Provence</h3>
+                            <p>Et sa crème de truffe</p>
+                        </div>
+                            <span class="prix">40€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
                 </div>
-                <div>
-                    <p>DESSERTS</p>
-                    <div>
-                        <h3>Farandole de desserts</h3>
-                        <p>Du chef</p>
-                        <p>18€</p>
+                
+                <div class="flex_menu plat">
+                    <div class="flex_choix_menu">
+                        <p class="border_bot">PLATS</p>
                     </div>
-                    <div>
-                        <h3>Crème brulée</h3>
-                        <p>Revisitée</p>
-                        <p>22€</p>
-                    </div>
-                    <div>
-                        <h3>Tiramisu</h3>
-                        <p>A la noisette</p>
-                        <p>23€</p>
-                    </div>
+
+                    <label for="plat" class="card_menu_choix">
+                        <input id="plat" type="radio" name="plats" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Poulet rôti aux berges de Provence</h3>
+                            <p>Et sa crème de truffe</p>
+                        </div>
+                        <span class="prix">40€</span>
+                        <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="plat2" class="card_menu_choix">
+                        <input id="plat2" type="radio" name="plats" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Langouste rôtie</h3>
+                            <p>Et ses légumes de saison</p>
+                        </div>
+                            <span class="prix">35€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="plat3" class="card_menu_choix">
+                        <input id="plat3" type="radio" name="plats" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Côte de bŒuf Angus</h3>
+                            <p>Et sa purée de panais</p>
+                        </div>
+                            <span class="prix">44€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
                 </div>
-                <div>
-                    <button>Commander</button>
+
+                <div class="flex_menu dessert">
+                    <div class="flex_choix_menu">
+                        <p class="border_bot">DESSERTS</p>
+                    </div>
+
+                    <label for="dessert" class="card_menu_choix">
+                        <input id="dessert" type="radio" name="dessert" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Farandole de desserts</h3>
+                            <p>Du chef</p>
+                        </div>
+                        <span class="prix">18€</span>
+                        <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="dessert2" class="card_menu_choix">
+                        <input id="dessert2" type="radio" name="dessert" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Crème brulée</h3>
+                            <p>Revisitée</p>
+                        </div>
+                            <span class="prix">22€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+
+                    <label for="dessert3" class="card_menu_choix">
+                        <input id="dessert3" type="radio" name="dessert" class="hidden-input">
+                        <div class="flex_text_restaurants">
+                            <h3>Tiramisu</h3>
+                            <p>À la noisette</p>
+                        </div>
+                            <span class="prix">23€</span>
+                            <div class="button_check_menu"><i class="fa-solid fa-circle-check"></i></div>
+                    </label>
+                </div>
+
+                <div class="flex_button">
+                    <a href="#" class="btn_commander">Commander</a>
                 </div>
             </section>
         </main>
         <footer>
-            <div>
-                <h4>ohmyfood</h4>
+            <div class="flex_footer">
+                <h5>ohmyfood</h5>
                 <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
                 <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
                 <a href="#">Mentions légales</a>
-                <a href="#">Contact</a>
+                <a href="mailto:contact@ohmyfood.com">Contact</a>
             </div>
         </footer>
     </div>
