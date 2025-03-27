@@ -326,6 +326,22 @@ footer a {
   .menu_restaurant .flex_menu {
     width: 70%;
   }
+  footer {
+    display: flex;
+    justify-content: end;
+  }
+  footer .flex_footer {
+    flex-direction: row;
+    gap: 50px;
+  }
+  footer h5 {
+    order: 1;
+  }
+  footer .flex_footer_links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 /*# sourceMappingURL=style_menu.css.map */

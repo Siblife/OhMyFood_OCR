@@ -323,4 +323,23 @@ footer {
       width: 70%;
     }
   }
+  footer {
+    display: flex;
+    justify-content: end;
+
+    .flex_footer {
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    h5 {
+      order: 1;
+    }
+
+    .flex_footer_links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
 }
