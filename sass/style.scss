@@ -15,57 +15,103 @@ $background-linear-gradient: linear-gradient(193.33deg, $main-color -11.44%, $se
 $vert-nouveau: rgba(0, 135, 102, 1);
 $vert-menu: 3px solid rgba(153, 226, 208, 1);
 
-
-.dots-container {
+/********** LOADER **********/
+// Le conteneur du loader qui couvre tout l'écran
+.loader_overlay {
+  position: fixed; // Position fixe pour couvrir tout l'écran
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); // Fond semi-transparent
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  z-index: 1000; // Assure que le loader est au-dessus du contenu
+  animation: fadeOut 0.5s ease-in-out 3s forwards; // Animation pour disparaître après 3 secondes
 }
 
+// Conteneur des points animés
+.dots_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Style des points individuels
 .dot {
   height: 20px;
   width: 20px;
   margin-right: 10px;
   border-radius: 10px;
-  background-color: #b3d4fc;
-  animation: pulse 1.5s infinite ease-in-out;
+  background-color: $main-color; // Couleur principale
+  animation: pulse 3s infinite ease-in-out; // Animation de pulsation
 }
 
+// Supprime la marge droite pour le dernier point
 .dot:last-child {
   margin-right: 0;
 }
 
+// Délais d'animation pour chaque point pour un effet décalé
 .dot:nth-child(1) {
-  animation-delay: -0.3s;
+  animation-delay: -0.6s;
 }
 
 .dot:nth-child(2) {
-  animation-delay: -0.1s;
+  animation-delay: -0.3s;
 }
 
 .dot:nth-child(3) {
-  animation-delay: 0.1s;
+  animation-delay: 0s;
 }
 
+// Animation de pulsation des points
 @keyframes pulse {
   0% {
     transform: scale(0.8);
-    background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    background-color: $main-color;
+    box-shadow: 0 0 0 0 rgba($main-color, 0.7);
   }
 
-  50% {
+  33% {
     transform: scale(1.2);
-    background-color: #6793fb;
-    box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    background-color: $second-color;
+    box-shadow: 0 0 0 10px rgba($second-color, 0);
+  }
+
+  66% {
+    transform: scale(1);
+    background-color: $third-color;
+    box-shadow: 0 0 0 10px rgba($third-color, 0.7);
   }
 
   100% {
     transform: scale(0.8);
-    background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    background-color: $main-color;
+    box-shadow: 0 0 0 0 rgba($main-color, 0.7);
+  }
+}
+
+// Animation pour faire disparaître le loader
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// Contenu du site, initialement invisible
+.main_container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out 3s forwards; // Apparaît après 3 secondes
+}
+
+// Animation pour faire apparaître le contenu
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
