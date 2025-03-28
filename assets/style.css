@@ -1,38 +1,11 @@
 @charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -41,9 +14,7 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select {
+button, input, select {
   margin: 0;
 }
 
@@ -51,8 +22,7 @@ html {
   box-sizing: border-box;
 }
 
-img,
-video {
+img, video {
   height: auto;
   max-width: 100%;
 }
@@ -66,8 +36,7 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
+td, th {
   padding: 0;
 }
 
@@ -360,11 +329,7 @@ header p {
   opacity: 0;
 }
 .restaurant .heart_checkbox:checked + i {
-  background: linear-gradient(
-    193.33deg,
-    #9356dc -11.44%,
-    #ff79da 123.93%
-  ); /* Couleur du cœur rempli */
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%); /* Couleur du cœur rempli */
   background-clip: text;
   color: transparent;
   transform: scale(1.2);
@@ -442,24 +407,20 @@ footer a {
   .restaurant .flex_restaurant_card_desktop .card_restaurant {
     width: 490px;
   }
-  footer {
+  footer .flex_footer {
     display: flex;
-    justify-content: end;
-
-    .flex_footer {
-      flex-direction: row;
-      gap: 50px;
-    }
-
-    h5 {
-      order: 1;
-    }
-
-    .flex_footer_links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
+    flex-direction: row;
+  }
+  footer h5 {
+    order: 1;
+    margin-left: auto;
+  }
+  footer .flex_footer_links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
+    align-items: center;
   }
 }
 

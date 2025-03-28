@@ -11,7 +11,11 @@ $box-shadow-015: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 $box-shadow-025: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $background-grey-234: rgb(234, 234, 234);
 $background-grey-246: rgb(246, 246, 246);
-$background-linear-gradient: linear-gradient(193.33deg, $main-color -11.44%, $second-color 123.93%);
+$background-linear-gradient: linear-gradient(
+  193.33deg,
+  $main-color -11.44%,
+  $second-color 123.93%
+);
 $vert-nouveau: rgba(0, 135, 102, 1);
 $vert-menu: 3px solid rgba(153, 226, 208, 1);
 
@@ -411,9 +415,9 @@ footer {
     padding: 50px 180px;
     margin-top: 0;
 
-  h3 {
-    margin-left: 0;
-  }  
+    h3 {
+      margin-left: 0;
+    }
 
     .flex_fonctionnement {
       display: flex;
@@ -424,14 +428,14 @@ footer {
   .restaurant {
     padding: 0 180px;
 
-  .flex_restaurant_card_desktop {
-    display: flex;
-    justify-content: space-between;
+    .flex_restaurant_card_desktop {
+      display: flex;
+      justify-content: space-between;
 
-  .card_restaurant {
-    width: 490px;
-  }
-  }
+      .card_restaurant {
+        width: 490px;
+      }
+    }
   }
 
   footer {
@@ -444,6 +448,13 @@ footer {
       order: 1;
       margin-left: auto;
     }
+
+    .flex_footer_links {
+      display: flex;
+      justify-content: flex-end;
+      width: calc(100%);
+      gap: 30px;
+      align-items: center;
+    }
   }
 }
-

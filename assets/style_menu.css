@@ -260,6 +260,9 @@ header a {
 .menu_restaurant .entree .card_menu_choix:nth-child(4) {
   animation-delay: 0.9s;
 }
+.menu_restaurant .entree .card_menu_choix:nth-child(5) {
+  animation-delay: 1.2s;
+}
 .menu_restaurant .plat .card_menu_choix:nth-child(2) {
   animation-delay: 1.2s;
 }
